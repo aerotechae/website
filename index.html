@@ -624,6 +624,73 @@ footer {
 
 /* MOBILE */
 
+/* Hidden by default (desktop) */
+.logo-mobile {
+  display: none;
+}
+
+/* Visible on mobile only */
+@media (max-width: 767px) {
+    .logo-mobile {
+        --navy: #03265B;
+        --orange: #FF7A0D;
+        --gray: #666666;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-family: 'Montserrat', Arial, sans-serif;
+        width: 100%;
+        width: 100%;
+        line-height: 1;
+    }
+
+  .logo-mobile .navy   { color: var(--navy); }
+  .logo-mobile .orange { color: var(--orange); }
+
+  .logo-mobile .logo-main {
+    font-weight: 800;
+    font-size: clamp(30px, 6vw, 54px);
+    letter-spacing: -0.02em;
+  }
+
+  .logo-mobile .logo-sub,
+  .logo-mobile .logo-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .logo-mobile .logo-sub {
+    margin-top: 4px;
+    font-weight: 800;
+    font-size: clamp(9px, 3vw, 17px);
+  }
+
+  .logo-mobile .logo-tag {
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    font-size: clamp(6px, 2vw, 11px);
+    color: var(--gray);
+  }
+
+  .logo-mobile .line {
+    flex: 1;
+    height: 2px;
+    display: block;
+  }
+
+  .logo-mobile .navy-bg   { background: var(--navy); }
+  .logo-mobile .orange-bg { background: var(--orange); }
+}
+
+
+
+
+
 @media (max-width: 760px) {
   html {
     scroll-padding-top: 85px;
@@ -642,7 +709,7 @@ footer {
   }
 
   .brand-logo {
-    width: 260px;
+    width: 80px;
     max-height: 70px;
   }
 
@@ -755,7 +822,7 @@ footer {
 
 @media (max-width: 390px) {
   .brand-logo {
-    width: 220px;
+    width: 80px;
     max-height: 62px;
   }
 
@@ -806,6 +873,31 @@ footer {
         alt="AeroTech General Contracting LLC"
         class="brand-logo">
     </a>
+
+    <!-- Put this inside <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="logo.css">
+
+<!-- Put this inside your header -->
+<a class="logo-mobile" href="/">
+  <span class="logo-main">
+    <span class="navy">AERO</span><span class="orange">TECH</span>
+  </span>
+  <span class="logo-sub">
+    <i class="line white"></i>
+    <span class="navy">GENERAL CONTRACTING LLC</span>
+    <i class="line white"></i>
+  </span>
+  <span class="logo-tag">
+  </span>
+</a>
+
+
+
+
+
 
     <button
       class="menu-button"
